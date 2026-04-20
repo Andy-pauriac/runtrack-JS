@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tri de tableau</title>
+</head>
+<body>
+    <h1>Tri de tableau</h1>
+
+    <label for="numbers">Nombres (séparés par des virgules) :</label><br>
+    <input type="text" id="numbers" placeholder="ex: 5, 3, 8, 1, 9, 2"><br><br>
+
+    <label for="order">Ordre :</label>
+    <select id="order">
+        <option value="asc">Ascendant (asc)</option>
+        <option value="desc">Descendant (desc)</option>
+    </select><br><br>
+
+    <button onclick="tester()">Trier</button>
+
+    <p id="resultat"></p>
+
+    <script src="script.js"></script>
+    <script>
+        function tester() {
+            var input  = document.getElementById("numbers").value;
+            var order  = document.getElementById("order").value;
+            var p      = document.getElementById("resultat");
+
+            if (!input) {
+                p.textContent = "Veuillez entrer des nombres.";
+                return;
+            }
+
+            var numbers = input.split(",").map(function(n) {
+                return parseFloat(n.trim());
+            });
+
+            if (numbers.some(isNaN)) {
+                p.textContent = "Veuillez entrer uniquement des nombres valides.";
+                return;
+            }
+
+            var resultat = tri(numbers, order);
+            p.textContent = "Résultat : [" + resultat.join(", ") + "]";
+        }
+    </script>
+</body>
+</html>

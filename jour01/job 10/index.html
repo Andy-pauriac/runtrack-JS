@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Compter les voyelles</title>
+</head>
+<body>
+    <h1>Compter les voyelles</h1>
+
+    <label for="phrase">Entrez une phrase :</label><br>
+    <input type="text" id="phrase" placeholder="ex: Bonjour tout le monde" size="40"><br><br>
+
+    <button onclick="tester()">Compter</button>
+
+    <p id="resultat"></p>
+
+    <script src="script.js"></script>
+    <script>
+        function tester() {
+            var phrase = document.getElementById("phrase").value;
+            var p = document.getElementById("resultat");
+
+            if (!phrase) {
+                p.textContent = "Veuillez entrer une phrase.";
+                return;
+            }
+
+            var voyelles = ["a", "e", "i", "o", "u", "y"];
+            var compteur = 0;
+
+            for (var i = 0; i < phrase.length; i++) {
+                var lettre = phrase[i].toLowerCase();
+                if (voyelles.includes(lettre)) {
+                    compteur++;
+                }
+            }
+
+            p.textContent = "La phrase contient " + compteur + " voyelles.";
+        }
+    </script>
+</body>
+</html>

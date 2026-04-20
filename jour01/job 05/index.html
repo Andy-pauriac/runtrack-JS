@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jours de la semaine</title>
+</head>
+<body>
+    <h1>Jours de la semaine</h1>
+    <button onclick="afficherJoursSemaines()">Afficher les jours</button>
+    <ul id="liste"></ul>
+
+    <script src="script.js"></script>
+    <script>
+        function afficherJoursSemaines() {
+            var joursSemaines = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+            var liste = document.getElementById("liste");
+            liste.innerHTML = "";
+
+            for (var i = 0; i < joursSemaines.length; i++) {
+                var li = document.createElement("li");
+                li.textContent = joursSemaines[i];
+                liste.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>

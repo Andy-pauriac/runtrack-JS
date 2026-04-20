@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jour Travaillé</title>
+</head>
+<body>
+    <h1>Jour travaillé ?</h1>
+
+    <label for="date">Choisissez une date :</label>
+    <input type="date" id="date" min="2024-01-01" max="2024-12-31">
+    <button onclick="tester()">Vérifier</button>
+
+    <p id="resultat"></p>
+
+    <script src="script.js"></script>
+    <script>
+        function tester() {
+            var valeur = document.getElementById("date").value;
+            if (!valeur) {
+                document.getElementById("resultat").textContent = "Veuillez choisir une date.";
+                return;
+            }
+
+            // Redéfinition pour afficher dans la page au lieu de la console
+            var joursFerier2024 = [
+                "2024-01-01","2024-04-01","2024-05-01","2024-05-08",
+                "2024-05-09","2024-05-20","2024-07-14","2024-08-15",
+                "2024-11-01","2024-11-11","2024-12-25"
+            ];
+
+            var jours = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+            var mois  = ["janvier","février","mars","avril","mai","juin",
+                         "juillet","août","septembre","octobre","novembre","décembre"];
+
+            var date    = new Date(valeur + "T12:00:00");
+            var jour    = jours[date.getDay()];
+            var numJour = date.getDate();
+            var nomMois = mois[date.getMonth()];
+            var année   = date.getFullYear();
+
+            var mm = String(date.getMonth() + 1).padStart(2, "0");
+            var dd = String(date.getDate()).padStart(2, "0");
+            var dateFormatee = date.getFullYear() + "-" + mm + "-" + dd;
+
+            var p = document.getElementById("resultat");
+
+            if (joursFerier2024.includes(dateFormatee)) {
+                p.textContent = "Le " + jour + " " + numJour + " " + nomMois + " " + année + " est un jour férié.";
+            } else if (date.getDay() === 6 || date.getDay() === 0) {
+                p.textContent = "Non, " + jour + " " + numJour + " " + nomMois + " " + année + " est un week-end.";
+            } else {
+                p.textContent = "Oui, " + jour + " " + numJour + " " + nomMois + " " + année + " est un jour travaillé.";
+            }
+        }
+    </script>
+</body>
+</html>
