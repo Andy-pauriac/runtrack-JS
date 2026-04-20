@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Année Bissextile</title>
+</head>
+<body>
+    <h1>Vérificateur d'année bissextile</h1>
+
+    <label for="annee">Entrez une année :</label>
+    <input type="number" id="annee" placeholder="ex: 2024">
+    <button onclick="tester()">Vérifier</button>
+
+    <p id="resultat"></p>
+
+    <script src="script.js"></script>
+    <script>
+        function tester() {
+            var année = parseInt(document.getElementById("annee").value);
+            var p = document.getElementById("resultat");
+
+            if (isNaN(année)) {
+                p.textContent = "Veuillez entrer une année valide.";
+            } else if (bisextile(année)) {
+                p.textContent = année + " est une année bissextile (true).";
+            } else {
+                p.textContent = année + " n'est pas une année bissextile (false).";
+            }
+        }
+    </script>
+</body>
+</html>
