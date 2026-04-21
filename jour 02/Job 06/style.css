@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+body.active {
+  background-color: #003B7A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+body.active h1 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+body.active p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
