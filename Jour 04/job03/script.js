@@ -28,7 +28,6 @@ function filtrer() {
             liste.push(p);
         }
 
-        // on affiche les résultats dans un tableau
         var html = "<table>";
         html += "<tr><th>ID</th><th>Nom</th><th>Type</th></tr>";
 

@@ -1,4 +1,3 @@
-// on passe par allorigins pour eviter le probleme de CORS avec zenquotes
 document.getElementById("get-quote").addEventListener("click", function() {
 
     var url = "https://zenquotes.io/api/random";

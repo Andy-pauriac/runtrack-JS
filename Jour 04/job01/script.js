@@ -1,4 +1,3 @@
-// quand on clique sur le bouton on charge le fichier texte
 document.getElementById("button").addEventListener("click", function() {
 
     fetch("expression.txt")
