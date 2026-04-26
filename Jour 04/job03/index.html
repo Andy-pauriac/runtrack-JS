@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Job 03</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Job 03</h1>
+
+    <form>
+        <label>ID : </label>
+        <input type="text" id="filtreId">
+
+        <label>Nom : </label>
+        <input type="text" id="filtreNom">
+
+        <label>Type : </label>
+        <select id="filtreType">
+            <option value="">Tous</option>
+            <option value="Feu">Feu</option>
+            <option value="Eau">Eau</option>
+            <option value="Plante">Plante</option>
+            <option value="Electrik">Electrik</option>
+            <option value="Normal">Normal</option>
+            <option value="Vol">Vol</option>
+            <option value="Poison">Poison</option>
+            <option value="Psy">Psy</option>
+        </select>
+
+        <input type="button" value="Filtrer" onclick="filtrer()">
+    </form>
+
+    <div id="resultats"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

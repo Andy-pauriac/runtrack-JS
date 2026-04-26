@@ -1,0 +1,20 @@
+[
+    { "id": 1,   "nom": "Bulbizarre", "type": "Plante"   },
+    { "id": 2,   "nom": "Herbizarre", "type": "Plante"   },
+    { "id": 3,   "nom": "Florizarre", "type": "Plante"   },
+    { "id": 4,   "nom": "Salamèche",  "type": "Feu"      },
+    { "id": 5,   "nom": "Reptincel",  "type": "Feu"      },
+    { "id": 6,   "nom": "Dracaufeu",  "type": "Feu"      },
+    { "id": 7,   "nom": "Carapuce",   "type": "Eau"      },
+    { "id": 8,   "nom": "Carabaffe",  "type": "Eau"      },
+    { "id": 9,   "nom": "Tortank",    "type": "Eau"      },
+    { "id": 25,  "nom": "Pikachu",    "type": "Electrik" },
+    { "id": 26,  "nom": "Raichu",     "type": "Electrik" },
+    { "id": 39,  "nom": "Rondoudou",  "type": "Normal"   },
+    { "id": 52,  "nom": "Miaouss",    "type": "Normal"   },
+    { "id": 94,  "nom": "Gengar",     "type": "Poison"   },
+    { "id": 143, "nom": "Ronflex",    "type": "Normal"   },
+    { "id": 149, "nom": "Dracolosse", "type": "Vol"      },
+    { "id": 150, "nom": "Mewtwo",     "type": "Psy"      },
+    { "id": 151, "nom": "Mew",        "type": "Psy"      }
+]
